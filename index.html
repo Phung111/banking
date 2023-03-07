@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Customers</h1>
+                <div class="row">
+                    <input  id="customerID" type="hidden" value="0">
+                    <div class="form-group col-lg-6">
+                        <label>Full name</label>
+                        <input id="fullname" type="text" class="form-control" placeholder="Enter full name">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Email</label>
+                        <input id="email" type="email" class="form-control" placeholder="Enter email">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="form-group col-lg-6">
+                        <label>Phone</label>
+                        <input id="phone" type="tel" class="form-control" placeholder="Enter phone">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Address</label>
+                        <input id="address" type="text" class="form-control" placeholder="Enter address">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mr-2 btn-create" onclick="createCustomer()" >Create</button>
+                <button type="submit" class="btn btn-primary mr-2 btn-update d-none" onclick="updateCustomer()" >Update</button>
+                <button type="submit" class="btn btn-warning mr-2 btn-create" onclick="resetCreateForm()" >Cancel</button>
+        </header>
+
+        <div class="content">
+            <table class="table table-hover table-bordered">
+                <thead class="bg-secondary">
+                    <tr>
+                        <th>#</th>
+                        <th>Full name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Balance</th>
+                        <th colspan="3">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/assets/jquery/jquery-3.6.0.min.js"></script>
+
+    <script src="js.js"></script>
+
+    <script>
+
+        let customers = [
+            {
+                id: 1,
+                fullName: 'NVA',
+                email: 'nva@co.cc',
+                phone: '2345',
+                address: '28 Nguyễn Tri Phương',
+                balance: 0
+            },
+            {
+                id: 2,
+                fullName: 'NVB',
+                email: 'nvb@co.cc',
+                phone: '23456',
+                address: '28 Nguyễn Tri Phương',
+                balance: 0
+            }
+        ]
+
+
+    </script>
+</body>
+</html>
